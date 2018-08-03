@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PHP - Templating</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    {# <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script> #}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>PHP - Templating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
+
 <body>
-   
-<h1>  {{company}} </h1>
-<h3> {{catchPhrase}}  </h3>
 
-<p>At {{company}}, we create ... made of ... </p>
+  <div class="container-fluid bg-secondary">
+    <div class="row">
+      <div class="col-md-2 sm-12"></div>
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="col-md-6 sm-12">
+        <h1 class="text-center text-white">{{company}}</h1>
+        <h3 class="text-center text-white">{{catchPhrase}}</h3>
+        <br>
+        <h5 class="text-white">At {{company}}, we create {{adjective}} {{product}} made of {{material}} </h5>
+        <br>
+        <h5 class="text-white">Find out more on : {{url}}</h5>
+
+        <div class="card px-3 py-3 text-center" style="width:28rem;">
+          <img class="card-img-top" src={{imgCard}} alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-title"> {{product}} </h3>
+            <p class="card-text"> Material : {{material}}</p>
+            <p class="card-text"> Color : {{color}}</p>
+            <h5 class="card-title"> {{price}} $ only!</h5>
+            <a href="#" class="btn btn-info">Take my money</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 sm-12">
+        <div class="card px-1 py-1" style="width: 18rem;">
+          <img class="card-img-top rounded-circle" src={{imgCircle}} alt="Card image cap">
+          <div class="card-body text-center">
+            <h3 class="card-title">{{name}}</h3>
+            <h4 class="card-title">{{jobTitle}}</h4>
+            <br>
+            <h5 class="card-title">Contact info</h5>
+            <p class="card-text">{{email}}</p>
+            <p class="card-text">{{phone}}</p>
+            <br>
+            <p class="card-text">{{adress}}</p>
+            <p class="card-text">{{postCode}} {{city}} </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-{{name}} <br> {{url}} <br> 
-  
-</div>
-{{jobTitle}}
 </body>
+
 </html>
